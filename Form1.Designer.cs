@@ -33,8 +33,8 @@
             this.Lbl_Visitor_Name = new System.Windows.Forms.Label();
             this.TB_Surname = new System.Windows.Forms.TextBox();
             this.Box_Visitor = new System.Windows.Forms.GroupBox();
-            this.TB_Vis_ID = new System.Windows.Forms.TextBox();
             this.lbl_VIsitor_ID = new System.Windows.Forms.Label();
+            this.TB_Vis_ID = new System.Windows.Forms.TextBox();
             this.Lbl_Email = new System.Windows.Forms.Label();
             this.TB_Email = new System.Windows.Forms.TextBox();
             this.TB_Mobile = new System.Windows.Forms.TextBox();
@@ -47,7 +47,7 @@
             this.NUD_Hour = new System.Windows.Forms.NumericUpDown();
             this.Lbl_hhmm = new System.Windows.Forms.Label();
             this.CBox_Meeting = new System.Windows.Forms.ComboBox();
-            this.DateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.DateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.Lbl_MeetAim = new System.Windows.Forms.Label();
             this.lblMeetWith = new System.Windows.Forms.Label();
             this.Lbl_Time = new System.Windows.Forms.Label();
@@ -55,7 +55,6 @@
             this.Lbl_Date = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.LB_VisitOnSite = new System.Windows.Forms.ListBox();
-            this.btn_Submit = new System.Windows.Forms.Button();
             this.Btn_Save = new System.Windows.Forms.Button();
             this.Btn_Edit = new System.Windows.Forms.Button();
             this.Btn_Delete = new System.Windows.Forms.Button();
@@ -116,17 +115,6 @@
             this.Box_Visitor.TabStop = false;
             this.Box_Visitor.Text = "Visitor Details";
             // 
-            // TB_Vis_ID
-            // 
-            this.TB_Vis_ID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.TB_Vis_ID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TB_Vis_ID.Font = new System.Drawing.Font("Tw Cen MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_Vis_ID.Location = new System.Drawing.Point(88, 30);
-            this.TB_Vis_ID.Name = "TB_Vis_ID";
-            this.TB_Vis_ID.ReadOnly = true;
-            this.TB_Vis_ID.Size = new System.Drawing.Size(82, 26);
-            this.TB_Vis_ID.TabIndex = 19;
-            // 
             // lbl_VIsitor_ID
             // 
             this.lbl_VIsitor_ID.AutoSize = true;
@@ -137,6 +125,17 @@
             this.lbl_VIsitor_ID.Size = new System.Drawing.Size(91, 23);
             this.lbl_VIsitor_ID.TabIndex = 9;
             this.lbl_VIsitor_ID.Text = "Visitor ID :";
+            // 
+            // TB_Vis_ID
+            // 
+            this.TB_Vis_ID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.TB_Vis_ID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TB_Vis_ID.Font = new System.Drawing.Font("Tw Cen MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Vis_ID.Location = new System.Drawing.Point(88, 30);
+            this.TB_Vis_ID.Name = "TB_Vis_ID";
+            this.TB_Vis_ID.ReadOnly = true;
+            this.TB_Vis_ID.Size = new System.Drawing.Size(82, 26);
+            this.TB_Vis_ID.TabIndex = 19;
             // 
             // Lbl_Email
             // 
@@ -198,7 +197,7 @@
             this.Box_Meeting.Controls.Add(this.NUD_Hour);
             this.Box_Meeting.Controls.Add(this.Lbl_hhmm);
             this.Box_Meeting.Controls.Add(this.CBox_Meeting);
-            this.Box_Meeting.Controls.Add(this.DateTimePicker);
+            this.Box_Meeting.Controls.Add(this.DateTimePicker1);
             this.Box_Meeting.Controls.Add(this.Lbl_MeetAim);
             this.Box_Meeting.Controls.Add(this.lblMeetWith);
             this.Box_Meeting.Controls.Add(this.Lbl_Time);
@@ -235,9 +234,14 @@
             // 
             // NUD_Min
             // 
+            this.NUD_Min.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.NUD_Min.Location = new System.Drawing.Point(135, 127);
             this.NUD_Min.Maximum = new decimal(new int[] {
-            59,
+            50,
             0,
             0,
             0});
@@ -271,23 +275,25 @@
             // CBox_Meeting
             // 
             this.CBox_Meeting.FormattingEnabled = true;
+            this.CBox_Meeting.Items.AddRange(new object[] {
+            "Select from List"});
             this.CBox_Meeting.Location = new System.Drawing.Point(21, 193);
             this.CBox_Meeting.Name = "CBox_Meeting";
             this.CBox_Meeting.Size = new System.Drawing.Size(205, 35);
             this.CBox_Meeting.TabIndex = 10;
             this.CBox_Meeting.SelectedValueChanged += new System.EventHandler(this.Staff_ID_Function);
             // 
-            // DateTimePicker
+            // DateTimePicker1
             // 
-            this.DateTimePicker.AllowDrop = true;
-            this.DateTimePicker.CustomFormat = "";
-            this.DateTimePicker.Font = new System.Drawing.Font("Tw Cen MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DateTimePicker.Location = new System.Drawing.Point(21, 61);
-            this.DateTimePicker.Name = "DateTimePicker";
-            this.DateTimePicker.Size = new System.Drawing.Size(205, 33);
-            this.DateTimePicker.TabIndex = 6;
-            this.DateTimePicker.Value = new System.DateTime(2022, 3, 3, 11, 30, 37, 0);
+            this.DateTimePicker1.AllowDrop = true;
+            this.DateTimePicker1.CustomFormat = "yyyy-MM-dd";
+            this.DateTimePicker1.Font = new System.Drawing.Font("Tw Cen MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DateTimePicker1.Location = new System.Drawing.Point(21, 61);
+            this.DateTimePicker1.Name = "DateTimePicker1";
+            this.DateTimePicker1.Size = new System.Drawing.Size(205, 33);
+            this.DateTimePicker1.TabIndex = 6;
+            this.DateTimePicker1.Value = new System.DateTime(2022, 3, 3, 11, 30, 37, 0);
             // 
             // Lbl_MeetAim
             // 
@@ -353,7 +359,7 @@
             this.groupBox2.Location = new System.Drawing.Point(514, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.groupBox2.Size = new System.Drawing.Size(660, 363);
+            this.groupBox2.Size = new System.Drawing.Size(739, 417);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Visitors on-site";
@@ -366,37 +372,23 @@
             this.LB_VisitOnSite.FormattingEnabled = true;
             this.LB_VisitOnSite.HorizontalScrollbar = true;
             this.LB_VisitOnSite.ItemHeight = 20;
-            this.LB_VisitOnSite.Location = new System.Drawing.Point(9, 26);
+            this.LB_VisitOnSite.Location = new System.Drawing.Point(9, 27);
             this.LB_VisitOnSite.Name = "LB_VisitOnSite";
-            this.LB_VisitOnSite.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.LB_VisitOnSite.Size = new System.Drawing.Size(642, 324);
+            this.LB_VisitOnSite.Size = new System.Drawing.Size(721, 384);
             this.LB_VisitOnSite.TabIndex = 0;
             this.LB_VisitOnSite.MouseClick += new System.Windows.Forms.MouseEventHandler(this.LB_VisitOnSite_MouseClick);
-            this.LB_VisitOnSite.SelectedIndexChanged += new System.EventHandler(this.Form1_Load);
             this.LB_VisitOnSite.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LB_VisitorOnSite_KeyUp);
-            // 
-            // btn_Submit
-            // 
-            this.btn_Submit.BackColor = System.Drawing.Color.Olive;
-            this.btn_Submit.ForeColor = System.Drawing.Color.White;
-            this.btn_Submit.Location = new System.Drawing.Point(12, 381);
-            this.btn_Submit.Name = "btn_Submit";
-            this.btn_Submit.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.btn_Submit.Size = new System.Drawing.Size(482, 39);
-            this.btn_Submit.TabIndex = 11;
-            this.btn_Submit.Text = "Sign In";
-            this.btn_Submit.UseVisualStyleBackColor = false;
             // 
             // Btn_Save
             // 
-            this.Btn_Save.BackColor = System.Drawing.Color.OrangeRed;
+            this.Btn_Save.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.Btn_Save.ForeColor = System.Drawing.Color.White;
-            this.Btn_Save.Location = new System.Drawing.Point(654, 381);
+            this.Btn_Save.Location = new System.Drawing.Point(12, 390);
             this.Btn_Save.Name = "Btn_Save";
             this.Btn_Save.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.Btn_Save.Size = new System.Drawing.Size(133, 39);
+            this.Btn_Save.Size = new System.Drawing.Size(203, 39);
             this.Btn_Save.TabIndex = 12;
-            this.Btn_Save.Text = "Save/Update";
+            this.Btn_Save.Text = "Save";
             this.Btn_Save.UseVisualStyleBackColor = false;
             this.Btn_Save.Click += new System.EventHandler(this.Btn_Save_Click);
             // 
@@ -404,25 +396,27 @@
             // 
             this.Btn_Edit.BackColor = System.Drawing.Color.RoyalBlue;
             this.Btn_Edit.ForeColor = System.Drawing.Color.White;
-            this.Btn_Edit.Location = new System.Drawing.Point(853, 381);
+            this.Btn_Edit.Location = new System.Drawing.Point(245, 390);
             this.Btn_Edit.Name = "Btn_Edit";
             this.Btn_Edit.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.Btn_Edit.Size = new System.Drawing.Size(133, 39);
+            this.Btn_Edit.Size = new System.Drawing.Size(109, 39);
             this.Btn_Edit.TabIndex = 13;
             this.Btn_Edit.Text = "Edit";
             this.Btn_Edit.UseVisualStyleBackColor = false;
+            this.Btn_Edit.Click += new System.EventHandler(this.Btn_Edit_Click);
             // 
             // Btn_Delete
             // 
-            this.Btn_Delete.BackColor = System.Drawing.Color.Fuchsia;
+            this.Btn_Delete.BackColor = System.Drawing.Color.OrangeRed;
             this.Btn_Delete.ForeColor = System.Drawing.Color.White;
-            this.Btn_Delete.Location = new System.Drawing.Point(1041, 381);
+            this.Btn_Delete.Location = new System.Drawing.Point(380, 390);
             this.Btn_Delete.Name = "Btn_Delete";
             this.Btn_Delete.Padding = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.Btn_Delete.Size = new System.Drawing.Size(133, 39);
+            this.Btn_Delete.Size = new System.Drawing.Size(114, 39);
             this.Btn_Delete.TabIndex = 14;
             this.Btn_Delete.Text = "Delete";
             this.Btn_Delete.UseVisualStyleBackColor = false;
+            this.Btn_Delete.Click += new System.EventHandler(this.Btn_Delete_Click);
             // 
             // Form1
             // 
@@ -430,11 +424,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1201, 424);
+            this.ClientSize = new System.Drawing.Size(1265, 441);
             this.Controls.Add(this.Btn_Delete);
             this.Controls.Add(this.Btn_Edit);
             this.Controls.Add(this.Btn_Save);
-            this.Controls.Add(this.btn_Submit);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.Box_Meeting);
             this.Controls.Add(this.Box_Visitor);
@@ -473,7 +466,6 @@
         private System.Windows.Forms.Label Lbl_Surname;
         private System.Windows.Forms.Label Lbl_MeetAim;
         private System.Windows.Forms.Label lblMeetWith;
-        private System.Windows.Forms.DateTimePicker DateTimePicker;
         private System.Windows.Forms.ComboBox CBox_Meeting;
         private System.Windows.Forms.Label Lbl_hhmm;
         public System.Windows.Forms.Button Btn_Aim;
@@ -482,12 +474,12 @@
         public System.Windows.Forms.ListBox LB_VisitOnSite;
         private System.Windows.Forms.TextBox TB_Staff_ID;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_Submit;
         private System.Windows.Forms.Button Btn_Save;
         private System.Windows.Forms.Button Btn_Edit;
         private System.Windows.Forms.Button Btn_Delete;
         private System.Windows.Forms.TextBox TB_Vis_ID;
         private System.Windows.Forms.Label lbl_VIsitor_ID;
+        private System.Windows.Forms.DateTimePicker DateTimePicker1;
     }
 }
 
