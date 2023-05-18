@@ -19,7 +19,7 @@ namespace ProjectCharlie
 
         private void Cbox_Streach_CheckedChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void Btn_SetBG_Click(object sender, EventArgs e)
@@ -58,8 +58,8 @@ namespace ProjectCharlie
         }
 
         private void checkBox1_CheckedChanged()
-        { 
-        
+        {
+
         }
     }
 }

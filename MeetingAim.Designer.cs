@@ -45,7 +45,7 @@
             this.Rbtn_Meeting.AutoSize = true;
             this.Rbtn_Meeting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Rbtn_Meeting.Font = new System.Drawing.Font("Tw Cen MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Rbtn_Meeting.Location = new System.Drawing.Point(252, 137);
+            this.Rbtn_Meeting.Location = new System.Drawing.Point(38, 75);
             this.Rbtn_Meeting.Margin = new System.Windows.Forms.Padding(4);
             this.Rbtn_Meeting.Name = "Rbtn_Meeting";
             this.Rbtn_Meeting.Padding = new System.Windows.Forms.Padding(6, 4, 4, 4);
@@ -68,14 +68,13 @@
             this.Rbtn_Sales.TabIndex = 3;
             this.Rbtn_Sales.Text = "Sales Appointment";
             this.Rbtn_Sales.UseVisualStyleBackColor = false;
-            this.Rbtn_Sales.CheckedChanged += new System.EventHandler(this.Rbtn_Sales_CheckedChanged);
             // 
             // Rbtn_Interview
             // 
             this.Rbtn_Interview.AutoSize = true;
             this.Rbtn_Interview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Rbtn_Interview.Font = new System.Drawing.Font("Tw Cen MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Rbtn_Interview.Location = new System.Drawing.Point(25, 137);
+            this.Rbtn_Interview.Location = new System.Drawing.Point(252, 146);
             this.Rbtn_Interview.Margin = new System.Windows.Forms.Padding(4);
             this.Rbtn_Interview.Name = "Rbtn_Interview";
             this.Rbtn_Interview.Padding = new System.Windows.Forms.Padding(6, 4, 4, 4);
@@ -97,7 +96,7 @@
             this.lblAim.Size = new System.Drawing.Size(469, 43);
             this.lblAim.TabIndex = 4;
             this.lblAim.Text = "Please specify the nature of the meeting";
-            this.lblAim.Click += new System.EventHandler(this.lblAim_Click);
+            this.lblAim.Click += new System.EventHandler(this.LblAim_Click);
             // 
             // Btn_Cancel
             // 
@@ -149,12 +148,13 @@
             this.Rbtn_Visit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Rbtn_Visit.Checked = true;
             this.Rbtn_Visit.Font = new System.Drawing.Font("Tw Cen MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Rbtn_Visit.Location = new System.Drawing.Point(25, 75);
+            this.Rbtn_Visit.Location = new System.Drawing.Point(38, 146);
             this.Rbtn_Visit.Margin = new System.Windows.Forms.Padding(4);
             this.Rbtn_Visit.Name = "Rbtn_Visit";
             this.Rbtn_Visit.Padding = new System.Windows.Forms.Padding(6, 4, 4, 4);
             this.Rbtn_Visit.Size = new System.Drawing.Size(122, 39);
             this.Rbtn_Visit.TabIndex = 1;
+            this.Rbtn_Visit.TabStop = true;
             this.Rbtn_Visit.Tag = "";
             this.Rbtn_Visit.Text = "Site Visit";
             this.Rbtn_Visit.UseVisualStyleBackColor = false;
@@ -180,7 +180,7 @@
             this.Name = "MeetingAim";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Meeting Aim";
+            this.Text = "Aim";
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
